@@ -1,17 +1,16 @@
-import {ImageResizeMode} from '~/constants';
 import React from 'react';
-import {View} from 'react-native';
+import {useTranslation} from 'react-i18next';
+import {useStyles} from 'react-native-unistyles';
+
 import {PathIcons} from '~/assets/icons';
 import {
   SafeAreaScreen,
   Image,
   ButtonPrimary,
-  HorizontalLine,
-  Text,
   InlineTextButton,
+  Box,
 } from '~/components';
-import {useTranslation} from 'react-i18next';
-import {useStyles} from 'react-native-unistyles';
+import {ImageResizeMode} from '~/constants';
 import {stylesheet} from './styles';
 
 export const WelcomeScreen: React.FC = () => {
@@ -20,18 +19,21 @@ export const WelcomeScreen: React.FC = () => {
 
   return (
     <SafeAreaScreen>
-      <Image
-        source={PathIcons.Logo}
-        style={{width: '100%', height: 49}}
-        resizeMode={ImageResizeMode.Contain}
-      />
-      <ButtonPrimary label={t('signIn.button')} />
-      <HorizontalLine />
-      <InlineTextButton
-        textLeft={'Bạn chưa có tài khoản'}
-        label="DDawng ky"
-        textPressStyle={styles.buttonSignUp}
-      />
+      <Box flex={1} style={styles.bodyWrap}>
+        <Image
+          source={PathIcons.Logo}
+          style={{width: '100%', height: 49}}
+          resizeMode={ImageResizeMode.Contain}
+        />
+        <ButtonPrimary label={t('signIn.button')} />
+      </Box>
+      <Box style={styles.footerWrap}>
+        <InlineTextButton
+          textLeft={t('signIn.askAccount')}
+          label={t('signIn.signUp')}
+          textPressStyle={styles.buttonSignUp}
+        />
+      </Box>
     </SafeAreaScreen>
   );
 };

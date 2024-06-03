@@ -13,6 +13,11 @@ interface CustomViewProps extends ViewProps {
   layout?: 'row' | 'column';
 }
 
-export const Box: React.FC<CustomViewProps> = ({flex, layout, ...props}) => {
-  return <ViewRN style={{flex, flexDirection: layout}} {...props} />;
+export const Box: React.FC<CustomViewProps> = ({
+  flex,
+  layout,
+  style,
+  ...props
+}) => {
+  return <ViewRN style={[{flex, flexDirection: layout}, style]} {...props} />;
 };

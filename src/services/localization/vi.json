@@ -1,3 +1,5 @@
 {
-  "signIn.button": "Đăng nhập"
+  "signIn.button": "Đăng nhập",
+  "signIn.askAccount": "Bạn chưa có tài khoản?",
+  "signIn.signUp": "Đăng ký"
 }
