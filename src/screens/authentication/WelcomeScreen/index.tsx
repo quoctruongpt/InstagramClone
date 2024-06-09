@@ -10,12 +10,18 @@ import {
   InlineTextButton,
   Box,
 } from '~/components';
-import {ImageResizeMode} from '~/constants';
+import {ImageResizeMode, TAuthNavigation, ScreenNames} from '~/constants';
 import {stylesheet} from './styles';
+import {useNavigation} from '@react-navigation/native';
 
 export const WelcomeScreen: React.FC = () => {
   const {t} = useTranslation();
   const {styles} = useStyles(stylesheet);
+  const navigation = useNavigation<TAuthNavigation<'WelcomeScreen'>>();
+
+  const onLoginPress = () => {
+    navigation.navigate(ScreenNames.SignIn);
+  };
 
   return (
     <SafeAreaScreen>
@@ -25,7 +31,7 @@ export const WelcomeScreen: React.FC = () => {
           style={{width: '100%', height: 49}}
           resizeMode={ImageResizeMode.Contain}
         />
-        <ButtonPrimary label={t('signIn.button')} />
+        <ButtonPrimary label={t('signIn.button')} onPress={onLoginPress} />
       </Box>
       <Box style={styles.footerWrap}>
         <InlineTextButton
