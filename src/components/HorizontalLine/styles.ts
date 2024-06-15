@@ -1,8 +1,18 @@
 import {createStyleSheet} from 'react-native-unistyles';
 
-export const stylesheet = createStyleSheet(({colors}) => ({
+export const stylesheet = createStyleSheet(({colors, fonts, sizes}) => ({
   container: {
-    height: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  line: {
+    height: 0.5,
     backgroundColor: colors.hr,
+    flex: 1,
+  },
+  label: {
+    fontFamily: fonts.bold,
+    color: colors.hr,
+    paddingHorizontal: sizes.l,
   },
 }));

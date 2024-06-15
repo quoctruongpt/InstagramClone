@@ -9,6 +9,7 @@ export const lightTheme = {
     textButtonLabel: '#3797EF',
     hr: '#979797',
     textGray: '#0B0B0B',
+    inputBorder: 'rgba(0,0,0,0.1)',
   },
   margins: {
     xxs: 4,
@@ -48,6 +49,7 @@ export const darkTheme = {
     textButtonLabel: '#3797EF',
     hr: '#979797',
     textGray: '#0B0B0B',
+    inputBorder: 'rgba(0,0,0,0.1)',
   },
   margins: {
     xxs: 4,

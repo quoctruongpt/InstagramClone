@@ -1,5 +1,11 @@
 {
   "signIn.button": "Đăng nhập",
   "signIn.askAccount": "Bạn chưa có tài khoản?",
-  "signIn.signUp": "Đăng ký"
+  "signIn.signUp": "Đăng ký",
+  "signIn.username": "Tên đăng nhập",
+  "signIn.password": "Mật khẩu",
+  "signIn.forgotPassword": "Quên mât khẩu?",
+  "signIn.loginWithFacebook": "Đăng nhập với Facebook",
+  "signIn.loginWithGoogle": "Đăng nhập với Google",
+  "signIn.or": "Hoặc"
 }
